@@ -194,9 +194,9 @@ header.masthead {
   text-align: center;
   color: white;
   background-color: black;
-  *background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url("../images/kgp1.jpg");
-  *background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url("/img/acorn_street_small.jpg");
-  *background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url("/img/acorn_street_small.jpg");
+  /* *background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url("../images/kgp1.jpg"); */
+  /* *background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url("/img/acorn_street_small.jpg"); */
+  /* *background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url("/img/acorn_street_small.jpg"); */
   background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url("../images/kgp4.jpg");
   background-repeat: no-repeat;
   *background-attachment: scroll;
@@ -839,9 +839,9 @@ h6 {
   position: relative;
   display: table;
   width: 100%;
-  height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  height: 100%;
+  /* padding-top: 8rem; */
+  /* padding-bottom: 8rem; */
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../images/me1.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -852,6 +852,15 @@ h6 {
   font-size: 4rem;
   margin: 0;
   padding: 0;
+  text-shadow: 2px 2px 1px black;
+}
+
+.masthead h3{
+  text-shadow: 1.5px 1.5px 1px black;
+}
+
+.masthead img{
+  filter: drop-shadow(3px 3px 3px black);
 }
 
 .masthead .container {
@@ -861,21 +870,20 @@ h6 {
   right: 0%;
 }
 
-@media (min-width: 992px) {
-  .masthead {
-    height: 100vh;
-  }
+@media (max-width: 962px) {
   .masthead h1 {
     font-size: 3.5rem;
-    text-shadow: 2px 2px 1px black;
   }
   .masthead h3{
-    text-shadow: 2px 2px 1px black;
+    margin-bottom: 2rem !important;
   }
-  .masthead img{
-    filter: drop-shadow(3px 3px 3px black);
+ }
+
+ @media (max-width: 1200px){
+  .masthead .btn{
+    display: none;
   }
-}
+ }
 
 /* Side Menu */
 #sidebar-wrapper {
@@ -1414,7 +1422,15 @@ a:hover, a:focus, a:active {
 }
 
 .info_pic{
+  display: block;
+  margin: auto;
+  width: 80%;
   box-shadow: 1px 1px 1px 1px black;
+}
+@media (max-width: 768px) {
+  .info_pic{
+    display: none;
+  }
 }
 
 .copyright{
